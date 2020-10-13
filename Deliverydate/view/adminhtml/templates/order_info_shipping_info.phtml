@@ -1,0 +1,19 @@
+<div id="delivery-date">
+    <strong><?php echo __('Delivery Date 1') ?></strong>
+    <span class="price"><?=$block->getDeliveryDate() ?></span>
+</div>
+<div id="order-by">
+    <strong><?php echo __('Order by') ?></strong>
+    <span class="price"><?=$block->getOrderBy() ?></span>
+</div>
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            var element = $('#delivery-date').detach();
+            $('.order-shipping-method').append(element);
+            var orderBy = $('#order-by').detach();
+            $('.order-shipping-method').append(orderBy);
+        }
+    );
+</script>
